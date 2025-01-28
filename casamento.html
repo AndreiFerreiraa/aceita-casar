@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Você quer casar comigo?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #ff007f;
+    }
+    button {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+    #sim {
+      background-color: #4caf50;
+      color: white;
+    }
+    #nao {
+      background-color: #f44336;
+      color: white;
+    }
+    #nao:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Você quer casar comigo?</h1>
+  <button id="sim">Sim ❤️</button>
+  <button id="nao">Não 😢</button>
+
+  <script>
+    const btnNao = document.getElementById("nao");
+
+    btnNao.addEventListener("mouseover", () => {
+      // Gerar novas posições para o botão "Não"
+      const x = Math.random() * window.innerWidth * 0.8;
+      const y = Math.random() * window.innerHeight * 0.6;
+
+      // Atualizar a posição do botão
+      btnNao.style.position = "absolute";
+      btnNao.style.left = `${x}px`;
+      btnNao.style.top = `${y}px`;
+    });
+
+    // Para o botão "Sim"
+    document.getElementById("sim").addEventListener("click", () => {
+      alert("Eu sabia que você diria sim! 💍❤️");
+    });
+  </script>
+</body>
+</html>
